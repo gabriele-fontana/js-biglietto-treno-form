@@ -1,4 +1,11 @@
 main {
-    background-color: #f00058;
+    background-color: #030169;
     height: 100vh;
+}
+form {
+    background: #bed4ec;
+    color: rgb(1, 3, 32)
+}
+#recap {
+    background-color: #bed4ec;
 }
