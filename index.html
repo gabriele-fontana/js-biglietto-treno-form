@@ -1,15 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Tickets</title>
-    
 </head>
+
 <body>
-    <input type="number" id="km" placeholder="inserisci i km">
-    <input type="number" id="age" placeholder="inerisci età">
-    <button id="calculate-btn">calcola prezzo</button>
+   <main>
+    <div class="container">
+        <h2 class="text-center text-white">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+        <form class="bg-white rounded">
+            <div class="input-wrapper d-flex justify-content-around mb-4 p-4">
+
+                <span id="name_input">
+                    <h4>Nome e Cognome</h4>
+                    <input type="text" id="name">
+                </span>
+                <span id="km_input">
+                    <h4>Km da percorrere</h4>
+                    <input type="number" id="km">
+                </span>
+                <span id="age_input">
+                    <h4>Fascia d'età</h4>
+                    <select name="age" id="age">
+                        <option value="" disabled selected hidden>Seleziona la tua età</option>
+                        <option value="Giovane">0-18 anni</option>
+                        <option value="Adulto">19-64 anni</option>
+                        <option value="Anziano">over 65 anni</option>
+                    </select>
+                </span>
+            </div>
+            <div class="btn-wrapper text-center">
+                <button class="btn btn-large" id="calculate-btn">genera</button>
+                <button class="btn btn-large" type="reset">annulla</button>
+            </div>
+        </form>
+        <h2 class="d-none text-white text-center pt-4" id="title">RIEPILOGO BIGLIETTO</h2>
+        <div id="recap" class="bg-white mt-5 rounded">
+        </div>
+    
+    
+    
+    </div>
+
+
+   </main>
     <script src="./main.js"></script>
 </body>
+
 </html>
